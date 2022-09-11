@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PESCOFetch</title>
+    <link rel="stylesheet" href="./app.css" />
+  </head>
+  <body>
+    <section class="container">
+      <div class="title">
+        <h1>PESCOFetch</h1>
+        <p>made getting data so easy.</p>
+      </div>
+      <div class="content-container">
+        <div class="content">
+          <div class="buttons-container">
+            <button class="tab-btn active" data-id="get">GET</button>
+            <button class="tab-btn" data-id="post">POST</button>
+            <button class="tab-btn" data-id="update">UPDATE</button>
+            <button class="tab-btn" data-id="patch">PATCH</button>
+            <button class="tab-btn" data-id="delete">DELETE</button>
+          </div>
+          <div class="inputs-container">
+            <div class="inputs-content active" id="get">
+              <h4>GET DATA</h4>
+              <p>Enter the URL of your api to get data and display</p>
+              <form class="get-form">
+                <div class="form-group">
+                  <label for="getinputurl">URL</label>
+                  <input type="text" id="getinputurl" />
+                </div>
+                <button type="submit">Submit</button>
+              </form>
+            </div>
+            <div class="inputs-content" id="post">
+              <h4>POST DATA</h4>
+              <p>Create your post and enter the URL of your api.</p>
+              <form class="post-form">
+                <div class="form-group">
+                  <label for="postinputtitle">Title</label>
+                  <input type="text" id="postinputtitle" />
+                </div>
+                <div class="form-group">
+                  <label for="postinputbody">Body</label>
+                  <input type="text" id="postinputbody" />
+                </div>
+                <div class="form-group">
+                  <label for="postinputurl">URL</label>
+                  <input type="text" id="postinputurl" />
+                </div>
+
+                <button type="submit">Submit</button>
+              </form>
+            </div>
+            <div class="inputs-content" id="update">
+              <h4>UPDATE DATA</h4>
+              <p>Update your data base on your specific post url.</p>
+              <form class="update-form">
+                <div class="form-group">
+                  <label for="updateinputtitle">Title</label>
+                  <input type="text" id="updateinputtitle" />
+                </div>
+                <div class="form-group">
+                  <label for="updateinputbody">Body</label>
+                  <input type="text" id="updateinputbody" />
+                </div>
+                <div class="form-group">
+                  <label for="updateinputurl">URL</label>
+                  <input type="text" id="updateinputurl" />
+                </div>
+                <button type="submit">Submit</button>
+              </form>
+            </div>
+            <div class="inputs-content" id="patch">
+              <h4>PATCH DATA</h4>
+              <p>
+                Patch or Update a specific data in an object. lets apply patch
+                on the body as an example.
+              </p>
+              <form class="patch-form">
+                <div class="form-group">
+                  <label for="patchinputbody">Body</label>
+                  <input type="text" id="patchinputbody" />
+                </div>
+                <div class="form-group">
+                  <label for="patchinputurl">URL</label>
+                  <input type="text" id="patchinputurl" />
+                </div>
+                <button type="submit">Submit</button>
+              </form>
+            </div>
+            <div class="inputs-content" id="delete">
+              <h4>DELETE DATA</h4>
+              <p>
+                Enter the url api of the specific data in order for it to be
+                deleted. it will return an empty object, just check console if
+                it was deleted succesfully.
+              </p>
+              <form class="delete-form">
+                <div class="form-group">
+                  <label for="deleteinputurl">URL</label>
+                  <input type="text" id="deleteinputurl" />
+                </div>
+                <button type="submit">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="content">
+          <div class="display">
+            <h1>Display Data here</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
